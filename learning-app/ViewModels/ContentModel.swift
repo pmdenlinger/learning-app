@@ -9,7 +9,9 @@ import Foundation
 
 class ContentModel: ObservableObject {
     
-    @Published var modules: [Module]
+    @Published var modules: [Module] = [Module]()
+    
+    var styleData: Data?
     
     init() {
         
