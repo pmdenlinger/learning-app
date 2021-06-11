@@ -91,6 +91,7 @@
 		CE8A3BEC267185C60033694B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE8A3BF0267186E40033694B /* ContentModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -98,7 +99,6 @@
 		CE8A3BED267185D10033694B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE8A3BF0267186E40033694B /* ContentModel.swift */,
 				CE8A3BF426718ED70033694B /* Models.swift */,
 			);
 			path = Models;
