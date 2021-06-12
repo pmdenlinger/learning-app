@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE4D4492267435AD00837A15 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = CEF8DB8A267404ED004E5B00 /* style.html */; };
 		CE4D4493267435B300837A15 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF8DB89267404E8004E5B00 /* data.json */; };
+		CE4D44952674521300837A15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D44942674521300837A15 /* ContentView.swift */; };
 		CE6FA9D52673D0390007CF5B /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA9D42673D0390007CF5B /* HomeViewRow.swift */; };
 		CE8A3BDD267184ED0033694B /* learning_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3BDC267184ED0033694B /* learning_App.swift */; };
 		CE8A3BDF267184ED0033694B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3BDE267184ED0033694B /* HomeView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4D44942674521300837A15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE6FA9D42673D0390007CF5B /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		CE8A3BD9267184ED0033694B /* learning-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learning-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8A3BDC267184ED0033694B /* learning_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learning_App.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				CE8A3BDE267184ED0033694B /* HomeView.swift */,
 				CE6FA9D42673D0390007CF5B /* HomeViewRow.swift */,
+				CE4D44942674521300837A15 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				CE8A3BDF267184ED0033694B /* HomeView.swift in Sources */,
 				CE6FA9D52673D0390007CF5B /* HomeViewRow.swift in Sources */,
+				CE4D44952674521300837A15 /* ContentView.swift in Sources */,
 				CE8A3BDD267184ED0033694B /* learning_App.swift in Sources */,
 				CE8A3BF1267186E40033694B /* ContentModel.swift in Sources */,
 				CE8A3BF526718ED70033694B /* Models.swift in Sources */,
