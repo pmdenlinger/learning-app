@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4D4492267435AD00837A15 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = CEF8DB8A267404ED004E5B00 /* style.html */; };
+		CE4D4493267435B300837A15 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF8DB89267404E8004E5B00 /* data.json */; };
 		CE6FA9D52673D0390007CF5B /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA9D42673D0390007CF5B /* HomeViewRow.swift */; };
 		CE8A3BDD267184ED0033694B /* learning_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3BDC267184ED0033694B /* learning_App.swift */; };
 		CE8A3BDF267184ED0033694B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3BDE267184ED0033694B /* HomeView.swift */; };
@@ -66,8 +68,6 @@
 				CE8A3BED267185D10033694B /* Models */,
 				CE8A3BEF267185EC0033694B /* Helpers */,
 				CE8A3BEE267185E20033694B /* Resources */,
-				CEF8DB89267404E8004E5B00 /* data.json */,
-				CEF8DB8A267404ED004E5B00 /* style.html */,
 				CE8A3BE0267184F40033694B /* Assets.xcassets */,
 				CE8A3BE5267184F40033694B /* Info.plist */,
 				CE8A3BE2267184F40033694B /* Preview Content */,
@@ -111,6 +111,8 @@
 		CE8A3BEE267185E20033694B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEF8DB8A267404ED004E5B00 /* style.html */,
+				CEF8DB89267404E8004E5B00 /* data.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,8 +181,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4D4492267435AD00837A15 /* style.html in Resources */,
 				CE8A3BE4267184F40033694B /* Preview Assets.xcassets in Resources */,
 				CE8A3BE1267184F40033694B /* Assets.xcassets in Resources */,
+				CE4D4493267435B300837A15 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
