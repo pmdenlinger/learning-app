@@ -139,7 +139,9 @@ func hasNextLesson() -> Bool {
         data.append(Data(htmlString.utf8))
         
 //        Convert to attributed string
-        if let attributedString = try? NSAttributedString(data:data, options: documentAttributes: nil) {
+        if let attributedString = try? NSAttributedString(data:data, options:
+        [.documentType:NSAttributedString.DocumentType.html],
+        documentAttributes: nil) {
             
             resultString = attributedString
         }
