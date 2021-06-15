@@ -111,6 +111,7 @@ func nextLesson() {
         
 //  Set the current lesson property
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
     }
     else {
 //        Reset the lesson state
