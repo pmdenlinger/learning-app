@@ -24,6 +24,9 @@ class ContentModel: ObservableObject {
     @Published var lessonDescription = NSAttributedString()
     var styleData: Data?
     
+//    Current content selected and test
+    @Published var currentContentSelected: Int?
+    
     init() {
         
         getLocalData()
@@ -99,6 +102,7 @@ class ContentModel: ObservableObject {
     // Set the current lesson
     
     currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
     }
 
 func nextLesson() {
