@@ -19,7 +19,8 @@ struct CodeTextView: UIViewRepresentable {
         return textView
     }
     
-    func updateUIView(_ textView: UITextView, context: Context)  {
+    func updateUIView(_ textView: UITextView, context: Context)
+    {
 //        Set the attributed text for the lesson
         textView.attributedText = model.lessonDescription
         
