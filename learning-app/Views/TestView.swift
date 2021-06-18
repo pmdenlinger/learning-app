@@ -80,15 +80,58 @@ struct TestView: View {
                                 }
                             }
                             .disabled(submitted)
+                        
                         }
                         .accentColor(.black)
                         .padding()
                     }
+                    
+//                    Submit button
+                    Button {
+                        
+//                        Check if answer has been submitted
+                        if submitted == true{
+//                            Answer has already been submitted, move to next question
+                            model.nextQuestion()
+                            
+//                            Reset properties
+                            submitted = false
+                            selectedAnswerIndex = nil
+                        }
+                        else {
+//                            Submit the answer
+                            
+//                            Change submitted state to true
+                            submitted = true
+                            
+//                            Check the answer and increment the counter if correct
+                            if selectedAnswerIndex == model.currentQuestion!.correctIndex {
+                                numCorrect += 1
+                            }
+                        }
+                        
+//                        Check the answer and increment the counter if correct
+                        if selectedAnswerIndex == model.currentQuestion!.correctIndex {
+                            numCorrect += 1
+                        }
+                    } label: {
+                        
+                        ZStack {
+                            
+                            RectangleCard(color: .green)
+                                .frame(height: 48)
+                            
+                            Text("Submit")
+                                .bold()
+                                .foregroundColor(Color.white)
+                        }
+                        .padding()
+                    }
+                    .disabled(selectedAnswerIndex == nil)
                 }
+                .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
                 
-                // Button
-            }
-            .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
+                
             
         }
         
@@ -99,4 +142,5 @@ struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         TestView()
     }
+}
 }
