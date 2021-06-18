@@ -11,16 +11,17 @@ struct TestView: View {
     
     @EnvironmentObject var model:ContentModel
     
-    @State var selectedAnswerIndex: Int?
+    @State var selectedAnswerIndex:Int?
     @State var submitted = false
     
     @State var numCorrect = 0
+    
     
     var body: some View {
         
         if model.currentQuestion != nil {
             
-            VStack {
+            VStack (alignment: .leading) {
                 // Question number
                 Text("Question \(model.currentQuestionIndex + 1) of \(model.currentModule?.test.questions.count ?? 0)")
                     .padding(.leading, 20)
@@ -127,6 +128,15 @@ struct TestView: View {
                 }
                 .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
             }
+            .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
+            
+        }
+        else {
+            // If current question is nil, we show the result view
+            TestResultView(numCorrect: numCorrect)
+        }
+        
+    }
             
             var buttonText: String {
                 
@@ -156,5 +166,5 @@ struct TestView_Previews: PreviewProvider {
         TestView()
     }
 }
-}
-}
+
+
