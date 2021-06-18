@@ -47,6 +47,16 @@ struct TestView: View {
                                                         selectedAnswerIndex ? .gray : .white )
                                             .frame(height: 48)
                                     }
+                                    else {
+//                                        Answer has been submitted
+                                        if index == selectedAnswerIndex && index == model.currentQuestion!.correctIndex {
+                                            
+//                                            User has selected the right answer
+//                                            Show a green background
+                                            RectangleCard(color: Color.green)
+                                                .frame(height: 48)
+                                        }
+                                    }
                                 }
                             }
                         }
