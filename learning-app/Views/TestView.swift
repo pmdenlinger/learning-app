@@ -30,6 +30,28 @@ struct TestView: View {
                     .padding(.horizontal, 20)
                 
                 // Answers
+                ScrollView{
+                    VStack {
+                        ForEach (0..<model.currentQuestion!.answers.count, id: \self) {index in
+                            
+                            Button {
+//                                Track the selected index
+                                selectedAnswerIndex = index
+                                
+                            } label: {
+                                
+                                ZStack {
+                                    
+                                    if submitted == false {
+                                        RectangleCard(color: index ==
+                                                        selectedAnswerIndex ? .gray : .white )
+                                            .frame(height: 48)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 
                 // Button
             }
