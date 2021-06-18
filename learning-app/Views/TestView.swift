@@ -131,39 +131,30 @@ struct TestView: View {
             var buttonText: String {
                 
 //                Check if answer has been submitted
-                
-                        
-//                        Check the answer and increment the counter if correct
-                        if selectedAnswerIndex == model.currentQuestion!.correctIndex {
-                            numCorrect += 1
-                        }
-                    } label: {
-                        
-                        ZStack {
-                            
-                            RectangleCard(color: .green)
-                                .frame(height: 48)
-                            
-                            Text("Submit")
-                                .bold()
-                                .foregroundColor(Color.white)
-                        }
-                        .padding()
+                if submitted == true {
+                    if model.currentQuestionIndex + 1 ==
+                        model.currentModule!.test.questions.count {
+//                        This is the last question
+                        return "Finish"
                     }
-                    .disabled(selectedAnswerIndex == nil)
+                    else {
+//                        There is a next question
+                        return "Next"
+                    }
                 }
-                .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
-                
-                
-            
+                else {
+                    return "Submit"
+                }
+            }
         }
         
-    }
-}
+                
+                        
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
         TestView()
     }
+}
 }
 }
