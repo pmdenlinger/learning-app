@@ -33,7 +33,21 @@ struct TestResultView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            Spacer()
+            
+            Text(resultHeading)
+                .font(.title)
+            
+            Spacer()
+            
+            Text("You got \(numCorrect) out of \(model.currentModule?.test.questions.count ?? 0) questions")
+            
+            Spacer()
+            
+            Button {
+        }
     }
 }
 
