@@ -67,11 +67,22 @@ struct TestView: View {
                                         else if index == model.currentQuestion!.correctIndex {
                                             
 //                                            This is the correct answer
+//                                            Show a green background
+                                            RectangleCard(color: Color.green)
+                                                .frame(height: 48)
+                                        }
+                                        else {
+                                            RectangleCard(color: Color.white)
+                                                .frame(height: 48)
                                         }
                                     }
+                                    Text(model.currentQuestion!.answers[index])
                                 }
                             }
+                            .disabled(submitted)
                         }
+                        .accentColor(.black)
+                        .padding()
                     }
                 }
                 
