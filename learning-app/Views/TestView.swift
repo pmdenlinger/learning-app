@@ -11,6 +11,11 @@ struct TestView: View {
     
     @EnvironmentObject var model:ContentModel
     
+    @State var selectedAnswerIndex: Int?
+    @State var submitted = false
+    
+    @State var numCorrect = 0
+    
     var body: some View {
         
         if model.currentQuestion != nil {
