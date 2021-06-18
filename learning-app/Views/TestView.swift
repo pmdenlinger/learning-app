@@ -109,6 +109,29 @@ struct TestView: View {
                                 numCorrect += 1
                             }
                         }
+                    } label: {
+                        
+                        ZStack {
+                            
+                            RectangleCard(color: .green)
+                                .frame(height: 48)
+                            
+                            Text(buttonText)
+                                .bold()
+                                .foregroundColor(Color.white)
+                        }
+                        .padding()
+                    }
+                    .disabled(selectedAnswerIndex == nil)
+                    
+                }
+                .navigationBarTitle("\(model.currentModule?.category ?? "") Test")
+            }
+            
+            var buttonText: String {
+                
+//                Check if answer has been submitted
+                
                         
 //                        Check the answer and increment the counter if correct
                         if selectedAnswerIndex == model.currentQuestion!.correctIndex {
